@@ -15,6 +15,9 @@ jobs:
       ARM_CLIENT_SECRET: ${{secrets.TF_ARM_CLIENT_SECRET}}
       ARM_SUBSCRIPTION_ID: ${{secrets.AZ_SUBID}}
       ARM_TENANT_ID: ${{secrets.AZ_TENANTID}}
+      TF_VAR_administrator_login: ${{secrets.TF_VAR_administrator_login}}
+      TF_VAR_administrator_login_password: ${{secrets.TF_VAR_administrator_login_password}}
+      
 
     steps:
       - uses: actions/checkout@v2
