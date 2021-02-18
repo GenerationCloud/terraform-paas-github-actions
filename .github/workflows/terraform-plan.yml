@@ -2,6 +2,10 @@ name: Terraform Plan
 
 on: workflow_dispatch
 
+defaults:
+  run:
+    working-directory: ./terraform
+
 jobs:
   terraform:
     runs-on: ubuntu-latest
@@ -18,8 +22,8 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         
-      - name: Switch directory
-        run: cd terraform/
+      - name: List directory
+        run: ls -a
 
       - name: Terraform Init
         run: terraform init
